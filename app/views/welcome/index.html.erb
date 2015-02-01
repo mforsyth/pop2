@@ -1,0 +1,54 @@
+<%= random_snapshot -%>
+
+<h3>Welcome to our website!</h3>
+
+<p>
+  <strong>Mission:</strong> The Philadelphia Orchard Project plants and supports community orchards in the city of Philadelphia.
+</p>
+
+<p>
+POP works with community-based groups and volunteers to plan and plant orchards filled with useful and edible plants. POP provides the plants, trees, and training. Community organizations own, maintain, and harvest the orchards, expanding community-based food production. Orchards are planted in formerly vacant lots, community gardens, schoolyards, and other spaces, almost exclusively in low-wealth neighborhoods where people lack access to fresh fruit.
+</p>
+
+<p>Please join POP in building community food security for Philadelphia’s future!</p>
+
+<p>
+  <iframe width="420" height="315" src="http://www.youtube.com/embed/qvqY737qXNU" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+<p>
+  A few highlights from 2013:
+  <ul>
+    <li> Planted 6 new orchards with our community partners and
+      volunteers and expanded many existing sites.  </li>
+    <li> Added 138 fruit & nut trees, 210 berry bushes & vines, and
+      2112 perennials to city orchards. </li>
+    <li> Celebrated our 3rd annual Philadelphia Orchard Day with over
+      1250 participants at harvest festivals and other events at 13
+      orchard sites across the city.</li>
+    <li> Conducted our first ever POP orchard survey, revealing that
+      3000 Philadelphians tasted something grown in our orchards this
+      year, 3000 participated in orchard care, 5000 used them as
+      gathering spaces, and 6000 participated in educational
+      programs.   </li>
+    <li> Received new grants from ACTrees, Junior League Blossom Fund,
+      Claneil, Patricia Kind, and Rosenlund foundations.
+    </li>
+  </ul>
+</p>
+
+
+<h3>You can Help</h3>
+Please help us achieve our mission by
+<%= link_to 'signing up for our listserv', :controller => :volunteer, :action => :signup  %>,
+<%= link_to 'volunteering', :controller => :volunteer, :action => :index %>,
+or <%= link_to 'making a tax-deductible donation', :controller => :donate, :action => :index %>.
+
+<%= image_tag 'earthshare.jpg', :class => 'earthshare' %>
+
+<h3>Summer 2014 POP Newsletter</h3>
+<iframe id="newsletter" src="/newsletter.html" scrolling="auto"
+        width="700" height="400" onLoad="autoResize('newsletter');"></iframe>
+
+<%#= render :partial => "shared/full_planting_schedule" -%>

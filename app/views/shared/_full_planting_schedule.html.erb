@@ -1,0 +1,126 @@
+<style type="text/css">
+  fieldset.event {
+  border:1px dotted #999;
+  padding:10px;
+  margin-right:10px;
+  margin-bottom:15px;
+  }
+  .event legend {
+  font-size:11pt;
+  }
+  .not_attending {
+  color:#999;
+  }
+</style>
+
+<h3>EVENT SCHEDULE:
+</h3>
+
+<p>
+  We invite you to participate by planting with POP, working alongside volunteers from our community partners to plant orchards all over the city. Volunteers of all ages and skill levels are welcome. These events involve digging, planting, and spreading compost and mulch, so expect to get dirty. We can't guarantee tools for all; if you bring your own, it is advisable to write your name on them. Snacks and beverages to share are also welcome.
+</p>
+
+<p>
+  Planting events can generally be expected to last 3 or 4 hours. Please sign up for our volunteer email list for up-to-date info on events. We recommend that you check your email the morning of a planting to confirm whether if will be postponed to the raindate. Plantings happen in the spring and fall months.
+</p>
+
+
+
+<% for event in Event.upcoming(99) %>
+  <fieldset class="event">
+    <legend>
+      <% if event.when_text %>
+        <%= event.when_text -%>
+      <% else %>
+        <%= event.when_starts.strftime "%A, %B %d" -%>... <%= event.when_starts.strftime "%I:%M %p" -%>
+      <% end %>
+    </legend>
+    <p class="event_details">
+      <b><%= "#{event.title}: " if event.title -%><%= event.place_name -%></b>
+      <br/>(<%= event.address -%>)
+      <br/><%= auto_link(event.description) -%>
+    </p>
+
+    <% if event.rsvp_allowed? %>
+      <%= link_to_function 'RSVP...', "Effect.toggle('rsvp_#{event.id}', 'slide')" -%>
+
+      <div id="rsvp_<%= event.id -%>" class="rsvp" style="display:none">
+
+        <p>
+        <% attending = event.rsvps.select &:attending? %>
+        <% num_attending = attending.sum(&:how_many) %>
+        <% unless attending.blank? %>
+          <div class="attending">
+            <i>Attending (<%= num_attending -%>):</i>
+            <%= attending.map(&:name_with_bringing).join(', ') -%>
+          </div>
+        <% end %>
+
+        <% not_attending = event.rsvps.select {|r| !r.attending?}  %>
+        <% unless not_attending.blank? %>
+          <div class="not_attending">
+            <i>Not attending (<%= not_attending.size -%>):</i>
+            <%= not_attending.map(&:name).join(', ') -%>
+          </div>
+        <% end %>
+
+        <% if event.num_volunteers_needed %>
+          <div class="num_volunteers_needed">
+            <% if event.num_volunteers_needed < num_attending %>
+              We have enough volunteers for this event!
+            <% else %>
+              <%= event.num_volunteers_needed - num_attending %> more volunteers needed!
+            <% end %>
+          </div>
+        <% end %>
+        </p>
+
+        <% @rsvp = Rsvp.new :event => event, :attending => true %>
+
+        <% form_for :rsvp do |f| %>
+        <%= f.hidden_field :event_id -%>
+        Your name:
+        <%= f.text_field :name, :size => 20-%>
+        <br/><br/>
+        Your email address:
+        <%= f.text_field :email, :size => 20 -%>
+        <br/><br/>
+        Will you be joining us?
+        &nbsp;
+        <%= f.radio_button :attending, true, :onclick => "$('extra_#{event.id}').slideDown();"  -%> Yes
+        &nbsp;
+        <%= f.radio_button :attending, false, :onclick => "$('extra_#{event.id}').slideUp();" -%> No
+        <div id="extra_<%= event.id -%>">
+          <br/>
+          How many people will you bring (including yourself)?
+          <%= f.text_field :how_many, :size => 2 -%>
+          <br/><br/>
+          Are you a member of the POP board or Orchard Committee?
+          <br/>
+          <%= f.radio_button :board_or_committee, true -%> Yes
+          &nbsp;
+          <%= f.radio_button :board_or_committee, false -%> No
+        </div>
+
+        <br/><br/>
+        <%= submit_tag 'RSVP Now!' -%>
+      <% end %>
+    </div>
+    <% end %>
+  </fieldset>
+<% end %>
+
+<% if Event.upcoming.blank? %>
+  <p>
+    POP generally plants during the spring and fall. Check back for volunteer events or <%= link_to 'join our listserv', :controller => :volunteer, :action => :signup  %>.
+  </p>
+<% end %>
+
+<%= clearboth -%>
+<p> </p>
+<p>
+  Please contact <a href="mailto:phil@phillyorchards.org">phil@phillyorchards.org</a> for more information on a
+  particular planting.
+</p>
+
+<h3><%= link_to 'Sign up now!', :controller => :volunteer, :action => :signup -%></h3>

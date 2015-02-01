@@ -1,0 +1,150 @@
+<p>
+  <b>Thank you for being a friend and supporter of the Philadelphia
+    Orchard Project (POP)!</b>
+  Spring 2012 was our biggest, most exciting season yet and we would
+    like to share some of the highlights with you.  And as we start
+    planning for another busy fall season of expanding and supporting
+    Philadelphia's community orchards, we ask you to consider a
+    <%= link_to 'donation', 'http://r20.rs6.net/tn.jsp?e=001z2ZZBBFm1ObnvXj4x2xhW9bZzHnV5NuxBJOLjmByqtPXd8ziZL1FtGXgfMZfEaAw4_6yFzm7juWiYkqq1hYSngr6zVzxfR_fxknJC3azxLC2uH-4jo3CTbMjxnVWOIZL' %> to help us complete this vital work.
+</p>
+
+<p>
+  A few highlights from Spring 2012:
+  <ul>
+    <li>Planted four new orchards in partnership with the Hunting Park
+    Community Garden, Overbrook Environmental Education Center, Teens
+    4 Good Carousel Farm, and Urban Sustainability Leadership Academy
+    and expanded 12 existing orchards.  </li>
+    <li>Organized an all day Holistic Orchard Training event with
+    Michael Phillips in partnership with Bartram's Garden and UNI to
+    help build the knowledge and skills of Philadelphia's community
+    orchardists.  </li>
+    <li>Involved hundreds of Philadelphians from across the city in
+    planting and caring for community orchards. </li>
+    <li>Celebrated the spring harvest with a community Strawberry
+    Festival at Woodford Orchard.
+    </li>
+    <li>Secured grant support from the ACTrees People's Garden Grant
+    program to assist in creating Philadelphia's largest orchard at
+    the Bartram's Garden Community Farm.
+    </li>
+  </ul>
+</p>
+
+<%= image_with_caption '49', "First fruit at the Temple Presbyterian Church Orchard in North Philadelphia!" %>
+
+<p>
+<b>We need your help to support our continued success!</b> Please consider investing in POP as the end of the tax year approaches.  POP is run primarily by volunteers so your donation is stretched further, adding substantially to our ability to continue pursuing our goals of growing healthy food, green spaces and community food security.  <b>You can donate online</b> at phillyorchards.org/donate or by check at the address below:
+</p>
+
+<p id="pop_address">
+   Philadelphia Orchard Project
+<br/>
+    PO Box 222
+<br/>
+    Philadelphia, PA 19105
+</p>
+
+<p> You can also support us by attending our upcoming fundraiser: </p>
+
+<h1>POP Happy Hour @ The Wishing Well</h1>
+
+<p>
+Please join us from 4pm-7pm on August 15th for a Happy Hour benefiting
+POP at the Wishing Well, 767 S. 9th St in South Philly.  Specials
+include local beers, wine, mixed drinks and appetizers.  25% of gross
+sales will be generously donated to POP- and no cover!  So come on
+out, have some fun, support your local pub, and help us build
+community orchards in Philadelphia!  For more information on what The
+Wishing Well offers, see <%= link_to 'www.wishingwellphilly.com', 'http://www.wishingwellphilly.com./' %>.
+</p>
+
+<h1>Philadelphia's Largest Orchard!</h1>
+
+<p>POP and its partners <%= link_to "Bartram's Garden",  'http://www.bartramsgarden.org/' %> 
+and the <%= link_to 'Urban Nutrition Initiative (UNI)', 'http://www.urbannutrition.org/' %>
+  received a generous grant from the ACTrees People's
+  Garden program to expand the Bartram's Orchard. Volunteers helped
+  plant an additional 44 fruit trees there this spring, making it the
+  largest orchard in the city!  When completed this fall, the orchard
+  will total well over 100 fruit and nut trees and will demonstrate
+  the breadth and width of what can be grown in Philadelphia. In the
+  spirit of John Bartram's history as a plant collector, the orchard
+  will include everything from heirloom varieties of apples, pears,
+  and cherries to more unusual fruits like paw paws, jujubes, and
+  medlars.  Volunteers also assisted in creating a wetland garden
+  featuring blueberries, chokeberries, elderberries, and perennials
+  designed to attract beneficial insects and pollinators to the
+  orchard.   This exciting educational orchard space is part of the
+  newly developed Community Farm, a larger partnership between
+  Bartram's Garden, UNI, PHS, and Parks & Rec.  Ultimately the orchard
+  will supplement the vegetables and other produce already being grown
+  and sold by UNI's high school farmers in the underserved communities
+  of Southwest Philadelphia.</p>
+
+<%= image_with_caption '46', "POP's Orchard Director and the Bartram's Garden Orchard Assistant demonstrate planting techniques." %>
+
+<p>
+Use of the Bartram's Orchard as an urban orchard educational hub also
+began this spring.  More than sixty Philadelphia orchard enthusiasts
+gathered at Bartram's Garden on March 10th to participate in a
+Holistic Orchard Training event organized by POP, Bartram's Garden,
+and UNI.  The all day intensive workshop was led by orchard all-star
+Michael Phillips, a leader of the community orchard movement and
+author of The Apple Grower and The Holistic Orchard.  Participants
+spent the morning in the classroom learning the basics of holistic
+orchard care, including companion plants to build orchard ecology, use
+of compost tea and other organic foliar sprays, and natural pest &
+disease management.  In the afternoon, participants gained hands-on
+experience in pruning techniques demonstrated at the Bartram's Orchard
+and nearby POP orchards at Earth's Keepers Farm and the Chester Ave
+Community Garden.  The training was open to the public, but POP also
+sponsored scholarships for orchard caretakers from its partner sites
+across the city to attend.   </p>
+
+<h1>Spring 2012 Event Summary</h1>
+
+<p>
+<b>Hunting Park Orchard</b>,  North Philadelphia.  Grapes, kiwis, and a wide
+range of berry bushes and perennials were planted at the new community
+garden in this revitalized North Philadelphia park. An adjoining
+orchard of fruit and nut trees is planned for this partnership between
+the Hunting Park Community Garden, Fairmount Park Conservancy, Parks &
+Rec, and POP. Produce will be distributed within the neighborhood by
+the community gardeners.
+<br>
+<b>Teens 4 Good Orchard @ Carousel House</b>, West Fairmount Park.  Newly
+planted orchard in partnership with Teens 4 Good and Parks & Rec at
+the Carousel House.  <a href="http://teens4good.orbius.com/">Teens 4
+  Good</a> runs youth entrepreneurship programs
+that sell home-grown produce at farmstands and farmers markets around
+the city. The orchard supplements vegetable production and proceeds
+are reinvested in their youth programs.
+<br>
+<b>Overbrook Enviromental Education Center</b>, West Philadelphia.  JASTECH partnered with POP and the Master Gardeners to create a small ecological orchard at the site of their <a href="http://www.jastechdevelopment.org/oeec/default.asp">Overbrook Environmental Education Center</a>. The site also features a new production hoophouse, rainwater harvesting features, and pollinator gardens. The produce will anchor an on site farmers market.
+<br>
+<b>USLA Orchard</b>, South Philadelphia.  The Urban Sustainability Leadership Academy partnered with POP in planting a small orchard at one of their South Philly garden spaces.  USLA is a program of the United Communities of Southeast Philadelphia and involves high school students in growing and distributing food in their neighborhood.
+<br>
+<b>Orchard Expansions</b>.  POP also collaborated with community partners in expanding plantings at 12 existing orchard partner sites this spring, including Bartram's Garden, Woodford, Earth's Keepers, Temple PC, South Philly Teen, Pepper Middle School, Roxborough HS, Fairhill, Ogden, Francisville, Richard Allen PCS, and Teens 4 Good @ Poplar.   In all, 78 new fruit & nut trees, 172 berry bushes & vines, 1363 perennials & groundcovers were planted to help build a bountiful future for all Philadelphians.
+
+<%= image_with_caption '48', "University City HS Farmers demonstrate harvesting equipment donated to POP by #{link_to 'Give 2 Benefit', 'http://www.givetobenefit.com/'}" %>
+
+<p>
+ <b>POP Nursery</b>, East Mount Airy.  In a partnership with Weavers Way Farm, volunteers assisted in propagating plant materials for POP's orchards.  Additional plants were donated by individuals from across the city.
+
+<br/>
+<b>Orchard Education</b>.   More than 400 volunteers participated in orchard plantings and other POP events across the city and received training in orchard care and proper planting techniques.  POP and PHS Philly Green will be partnering again on a Fruit Tree Tenders workshop this winter and pruning training sessions will be held at many of our orchards.
+
+</p>
+
+<h1>Orchard Report: Fairhill</h1>
+
+<p>The Fairhill neighborhood around 9th & Indiana Streets in North Philly has plenty of new life in the form of edible greenery & community, thanks largely to its partnership with POP! Throughout the season, neighbors of various ages have been planting, harvesting, & spending much more time in the Historic Fair Hill Burial Ground Orchard (900 block of W Indiana St), Evelyn Sanders Orchard (3000 block of N Percy St), & 9th & Indiana Corner Gardens. </p>
+
+<p>In March, Fair Hill Burial Ground had a workparty with <a href="http://phillyfoodforests.org/">Philly Food Forests</a> to remove all of its raised beds & redesign its garden for greater food production, better aesthetics, & expanded edible perennial plantings. The raised beds from Fair Hill were reconstructed in the nearby Evelyn Sanders Orchard, where there are now 8 beds exploding with vegetables in addition to the prolific perennial edibles lining the lot's fences & a sturdy new bench where residents relax. The workparty was followed in April by a great POP volunteer day where 12 varieties of berries, 2 rose bushes, & 4 varieties of fruit trees were planted throughout the burial ground's garden space. The corner of 9th & Indiana Streets has had a beautiful makeover due to new neighbor involvement, benches, new fruit trees, & colorful perennial flowers. </p>
+
+<%= image_with_caption '47', 'Community gathering at the revitalized Peaches Garden at 9th & Indiana.' %>
+
+<p>The sites have come alive this summer with community meetings, first fruit harvests, summer camp visits, art projects, produce giveaways, & July 14th's annual Fair Hill Summer Festival, proven to be the best attended yet! If you would like to visit the area & learn about its bounty, feel free to stop by any Monday, Thursday, or Saturday between 4-6pm when POP's Orchard Liaison for the sites, Robyn Mello, has the Fair Hill gates opened. She'd be more than happy to give you a tour & a tasting!</p>
+
+<p><i>Orchard Report contributed by Robyn Mello of Philly Food Forests, Occupy Vacant Lots, Fairhill Burial Ground, and POP's Orchard Committee.</i> </p>

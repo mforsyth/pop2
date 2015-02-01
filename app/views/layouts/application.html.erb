@@ -1,10 +1,123 @@
+<html>
+	<head>
+		<title>Philadelphia Orchard Project</title>
+		<%= stylesheet_link_tag 'http://yui.yahooapis.com/2.5.2/build/reset-fonts-grids/reset-fonts-grids.css' -%>
+                <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+                <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+                <%= csrf_meta_tags %>
+
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		var pageTracker = _gat._getTracker("UA-5494368-1");
+		pageTracker._trackPageview();
+		</script>
+	</head>
+
+<body>
+	
+<div id="container">
+	<%= image_tag 'top_banner.jpg', :id => 'top_banner' -%>
+
+	<% for nav in %w(welcome orchards volunteer donate about_pop) %>"
+		<%= link_to image_tag("#{nav}_#{controller.controller_name == nav ? 'on' : 'off'}.png", 
+			:id => "#{nav}_nav", :class => 'main_nav', 
+			:onMouseOver => "mouseOverMenu('#{nav}');",
+			:onMouseOut => "mouseOutMenu('#{nav}');"), :controller => nav -%>
+		<div id="submenu_<%= nav -%>" class="submenu" onMouseOver="mouseOverSubMenu('<%= nav -%>');" onMouseOut="mouseOutSubMenu('<%= nav -%>');" style="display:none">
+			<%= sections_for "#{nav}_controller".camelize.constantize -%>
+  		</div>
+	<% end %>
+
+	<div id="left_bar">
+		<div class='orange-left-block left_block'>
+			<%= link_to controller.controller_name.titleize, {:action => :index}, :class => 'main' -%>:
+			<br/>
+			<br/>
+			<%= sections_for controller.class -%>
+		</div>
+		<%= image_tag 'subnav_bottom.png', :class => 'subnav-bottom left_block' -%>
+		<%= link_to image_tag('help_us_grow.png', :id => 'help_us_grow', :class => 'left_block'), :controller => :donate -%>
+                <div id="our_mission">
+		  <br/>
+<br/>
+<br/>
+
+                  <h4>Our Mission:</h4>
+                  To plant and support community orchards in the city of Philadelphia.
+                </div>
+
+		<%= image_tag 'subnav_top.png', :class => 'subnav-top left_block' -%>
+		<div id="social-links" class='orange-left-block left_block'>
+                  <div class="main">Find us on:</div>
+		  <br/>
+                  <ul>
+                    <li><%= link_to 'Facebook', 'https://www.facebook.com/groups/128026710612688/'%></li>
+                    <li>Instagram - try #phillyorchards</li>
+                  </ul>
+		</div>
+		<%= image_tag 'subnav_bottom.png', :class => 'subnav-bottom left_block' -%>
+
+	</div>
+
+	
+	<div id="yield">
+		<% if session[:admin] %>
+			<div id="logged_in">You're logged in as the admin... 
+				<%= link_to 'Events', :controller => :events -%>
+				|
+				<%= link_to 'Press', :controller => :news_stories -%>
+				|
+				<%= link_to 'Totals', :controller => :settings -%>
+				|
+				<%= link_to 'Board', :controller => :board_members -%>
+				|
+				<%= link_to 'Log Out', :controller => :session, :action => :logout -%>
+				</div>
+		<% end %>
+		<% if flash[:error] %>
+			<div id="flash_error"><%= flash[:error] -%></div>
+		<% end %>
+		<% if flash[:notice] %>
+			<div id="flash_notice"><%= flash[:notice] -%></div>
+		<% end %>
+		<%= yield -%>		
+	</div>
+
+	<% unless @hide_right_bar %>
+	<div id="right_bar">
+		<div class="right_compartment" id="upcoming_events">
+			<%= render :partial => 'shared/upcoming' -%>
+		</div>
+		<div class="right_compartment" id="plant_counts">
+			# orchards supported:
+			<div><%= Setting.first.num_orchards_supported -%></div>
+			# orchards planted:
+			<div><%= Setting.first.orchards_planted -%></div>
+			# of trees planted:
+			<div><%= Setting.first.trees_planted -%></div>
+			# shrubs &amp; vines:
+			<div><%= Setting.first.berry_bushes_planted -%></div>
+			# of perennials:
+			<div><%= Setting.first.num_perennials -%></div>
+		</div>
+		<div class="right_compartment" id="what_planting">
+			<%= render :partial =>	'shared/what_were_planting' -%>
+		</div>
+    </div>
+    <% end %>
+</div>
+</body>
+
+</html>
+
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Phillyorchards2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
 </head>
 <body>
 

@@ -1,0 +1,19 @@
+<style type="text/css">
+	#welcome_blurbs {
+		z-index:10;
+		width:295px;
+	}
+	#welcome_snaps {
+		position:absolute;
+		top:0px;
+		right:0px;
+		z-index:0;
+	}
+</style>
+
+<%= image_tag 'welcome_snaps.png', :id => 'welcome_snaps' %>
+
+<div id="welcome_blurbs">
+	<h3>Welcome!</h3>
+	<p>We hope the following pages will inform and inspire you to join us in our important mission. Together, we can create a secure and healthy future for our Great City.</p>
+</div>

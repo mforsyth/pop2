@@ -1,0 +1,9 @@
+<h3>News</h3>
+
+<div id="newsletter">
+  <%= render :partial => "newsletter" -%>
+</div>
+
+<br/><br/>
+<%= render :partial => "shared/pop_in_news" -%>
+

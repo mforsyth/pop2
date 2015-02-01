@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/mojotech_phillyorchard2/!svn/ver/129/trunk/app/views/welcome
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/mojotech_phillyorchard2/!svn/ver/141/trunk/app/views/welcome/index.html.erb
+END
+old_welcome.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/mojotech_phillyorchard2/!svn/ver/10/trunk/app/views/welcome/old_welcome.html.erb
+END
+_newsletter.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/mojotech_phillyorchard2/!svn/ver/143/trunk/app/views/welcome/_newsletter.html.erb
+END
+news.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/mojotech_phillyorchard2/!svn/ver/113/trunk/app/views/welcome/news.html.erb
+END
