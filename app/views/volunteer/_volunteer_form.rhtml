@@ -1,0 +1,193 @@
+<%= error_messages_for 'volunteer' %>
+
+<!--[form:volunteer]-->
+
+<table cellspacing="5" cellpadding="0" style="float: left; margin-right: 10px;">
+<tr>
+        <td>Name:</td>
+        <td>
+          <input type="text" maxlength="50" size="20" id="name" name="volunteer[name]"/></td>
+</tr>
+
+<tr>
+        <td>E-mail address:</td>
+        <td><input type="text" maxlength="64" size="20" id="email" name="volunteer[email]"/></td>
+</tr>
+<tr>
+        <td>Phone number:</td>
+        <td><input type="text" maxlength="14" size="12" id="phone" name="volunteer[phone]"/></td>
+</tr>
+</table>
+
+<table cellspacing="5" cellpadding="0">
+
+<tr>
+        <td>Address:</td>
+        <td><input type="text" maxlength="50" size="20" name="volunteer[address1]"/></td>
+</tr>
+<tr>
+        <td></td>
+        <td><input type="text" maxlength="50" size="20" name="volunteer[address2]"/></td>
+</tr>
+<tr>
+        <td>City:</td>
+
+        <td>
+                <input type="text" maxlength="30" size="10" name="volunteer[city]" <% unless session[:admin] -%> value="Philadelphia" <% end -%> />
+                State: <input type="text" maxlength="2" size="2" name="volunteer[state]" <% unless session[:admin] -%>  value="PA" <% end -%>/>
+                Zip: <input type="text" maxlength="10" size="5" name="volunteer[zip]"/>
+        </td>
+</tr>
+</table>
+
+<p>
+Please click on the items below that you are willing to help our project with.<br />
+
+If you have experience in this area, please select 'Skill', otherwise 'Interest'.
+</p>
+
+<div class="column" style="float: left;">
+<h4 style="margin-top: 0em;">Incorporation</h4>
+<ul>
+        <li><span id="j1"><a href="#" onclick="return addRadio('j1', 'nonprofit');">nonprofit</a></span></li>
+        <li><span id="j2"><a href="#" onclick="return addRadio('j2', 'land trust');">land trust</a></span></li>
+</ul>
+
+<h4>Grantwriting</h4>
+<ul>
+        <li><span id="j3"><a href="#" onclick="return addRadio('j3', 'general grantwriting');">general grantwriting</a></span></li>
+</ul>
+
+<h4>Site Selection</h4>
+<ul>
+        <li><span id="j4"><a href="#" onclick="return addRadio('j4', 'zoning');">zoning</a></span></li>
+        <li><span id="j5"><a href="#" onclick="return addRadio('j5', 'ownership');">ownership</a></span></li>
+        <li><span id="j6"><a href="#" onclick="return addRadio('j6', 'prices');">prices</a></span></li>
+        <li><span id="j7"><a href="#" onclick="return addRadio('j7', 'soil analysis');">soil analysis</a></span></li>
+        <li><span id="j8"><a href="#" onclick="return addRadio('j8', 'neighborhood preference/need');">neighborhood preference/need</a></span></li>
+</ul>
+
+<h4>Microclimate</h4>
+<ul>
+        <li><span id="j9"><a href="#" onclick="return addRadio('j9', 'air drainage');">air drainage</a></span></li>
+        <li><span id="j10"><a href="#" onclick="return addRadio('j10', 'prevailing winds');">prevailing winds</a></span></li>
+        <li><span id="j11"><a href="#" onclick="return addRadio('j11', 'insolation');">insolation</a></span></li>
+        <li><span id="j12"><a href="#" onclick="return addRadio('j12', 'water sources');">water sources</a></span></ul><h4>Site Purchase</h4><ul></li>
+        <li><span id="j13"><a href="#" onclick="return addRadio('j13', 'land trust');">land trust</a></span></li>
+        <li><span id="j14"><a href="#" onclick="return addRadio('j14', 'conservation easement tax deductions');">conservation easement tax deductions</a></span></li>
+</ul>
+</div>
+
+<div class="column" style="margin-left: 15px; float: right;">
+<h4 style="margin-top: 0em;">Site Preparation</h4>
+<ul>
+        <li><span id="j15"><a href="#" onclick="return addRadio('j15', 'debris clearance and recycling');">debris clearance and recycling</a></span></li>
+        <li><span id="j16"><a href="#" onclick="return addRadio('j16', 'soil remediation & drainage');">soil remediation & drainage</a></span></li>
+        <li><span id="j17"><a href="#" onclick="return addRadio('j17', 'soil amendments: manures');">soil amendments: manures</a></span></li>
+        <li><span id="j18"><a href="#" onclick="return addRadio('j18', 'tools: shovels, hoes, rakes, rototiller, pruners');">tools: shovels, hoes, rakes, rototiller, pruners</a></span></li>
+        <li><span id="j19"><a href="#" onclick="return addRadio('j19', 'security: fence, signage');">security: fence, signage</a></span></li>
+</ul>
+
+<h4>Planting</h4>
+<ul>
+        <li><span id="j20"><a href="#" onclick="return addRadio('j20', 'select varieties');">select varieties</a></span></li>
+        <li><span id="j21"><a href="#" onclick="return addRadio('j21', 'design');">design</a></span></li>
+</ul>
+
+<h4>Fertilizing</h4>
+<ul>
+        <li><span id="j22"><a href="#" onclick="return addRadio('j22', 'manures from local stables');">manures from local stables</a></span></li>
+        <li><span id="j23"><a href="#" onclick="return addRadio('j23', 'other sources');">other sources</a></span></li>
+</ul>
+
+<h4>Watering</h4>
+<ul>
+        <li><span id="j24"><a href="#" onclick="return addRadio('j24', 'drip irrigation');">drip irrigation</a></span></li>
+</ul>
+
+<h4>Pruning</h4>
+<ul>
+        <li><span id="j25"><a href="#" onclick="return addRadio('j25', 'general pruning');">general pruning</a></span></li>
+</ul>
+</div>
+
+<div class="column" style="margin-left: 15px; float: right;">
+<h4 style="margin-top: 0em;">Pest Control</h4>
+<ul>
+        <li><span id="j26"><a href="#" onclick="return addRadio('j26', 'IPM');">IPM</a></span></li>
+        <li><span id="j27"><a href="#" onclick="return addRadio('j27', 'rodent control');">rodent control</a></span></li>
+        <li><span id="j28"><a href="#" onclick="return addRadio('j28', 'bird nets');">bird nets</a></span></ul><h4>Harvest</h4><ul></li>
+        <li><span id="j29"><a href="#" onclick="return addRadio('j29', 'tools: baskets, pickers, aprons, ladders');">tools: baskets, pickers, aprons, ladders</a></span></li>
+</ul>
+
+<h4>Processing</h4>
+<ul>
+        <li><span id="j30"><a href="#" onclick="return addRadio('j30', 'canning');">canning</a></span></li>
+        <li><span id="j31"><a href="#" onclick="return addRadio('j31', 'drying');">drying</a></span></li>
+        <li><span id="j32"><a href="#" onclick="return addRadio('j32', 'baking');">baking</a></span></li>
+</ul>
+
+<h4>Distribution</h4>
+<ul>
+        <li><span id="j33"><a href="#" onclick="return addRadio('j33', 'general distribution');">general distribution</a></span></li>
+</ul>
+
+<h4>Sales</h4>
+<ul>
+        <li><span id="j34"><a href="#" onclick="return addRadio('j34', 'labels');">labels</a></span></li>
+        <li><span id="j35"><a href="#" onclick="return addRadio('j35', 'retailers');">retailers</a></span></li>
+        <li><span id="j36"><a href="#" onclick="return addRadio('j36', 'farmers markets');">farmers markets</a></span></li>
+</ul>
+</div>
+
+<p style="clear: both;">
+The Philly Orchard Project is seeking "seed money". We're seeking tax-deductible status but need start-up funds.<br />
+Please contact us directly if you can provide any amount of money: <a href="mailto:paul5glover@yahoo.com">paul5glover@yahoo.com</a>
+</p>
+
+<p>
+Please check here if you are able to donate land:
+<input type="checkbox" name="volunteer[donate_land]" value="true"/>
+</p>
+
+<p>
+Is there anyone else you know who might be willing to help?<br />
+Let us know here:<br />
+
+<textarea cols="50" rows="2" name="volunteer[who_can_help]"></textarea>
+</p>
+
+<p>
+Finally, feel free to leave any other comments.<br />
+<textarea cols="70" rows="3" name="volunteer[comments]"></textarea>
+</p>
+<script type="text/javascript">
+function radioize(title) {
+        return "skill[" + title.replace(/ /g, '_') + "]"
+}
+
+function addRadio(id, title)
+{
+        radized = radioize(title);
+        input = title + '<br \/>';
+        input += '<input type="radio" name="' + radized + '" value="2" \/>Skill';
+        input += ' <input type="radio" name="' + radized + '" value="1" checked \/>Interest';
+        input += '<br />&nbsp;&nbsp;&nbsp;';
+        input += '<a href="#" onclick="return remRadio(\'' + id + '\', \'' + title + '\');">remove<\/a>';
+
+        document.getElementById(id).innerHTML=input;
+        return false;
+}
+
+function remRadio(id, title)
+{
+        input = '<a href="#" onclick="return addRadio(\'' + id + '\', \'' + title + '\');">';
+        input += title;
+        input += '<\/a>';
+
+        document.getElementById(id).innerHTML=input;
+        return false;
+}
+</script>
+
+<!--[eoform:volunteer]-->

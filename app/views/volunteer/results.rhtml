@@ -1,0 +1,44 @@
+<DIV class="breadcrumbs">
+<%= link_to "Back to search form", :action => "search" %>
+</DIV>
+
+<Br>
+
+<% if @cond_nl.size > 0 -%>
+You specified the following search conditions:
+<br>
+<ul>
+  <% for cond in @cond_nl %>
+  <li><%= cond %></li>
+  <% end %>
+</ul>
+<% end -%>
+
+<% if @volunteers && @volunteers.size > 0 -%>
+
+The following volunteers match your search:
+<Br>
+
+<TABLE cellpadding="4">
+<% for volunteer in @volunteers %>
+  <tr><td>
+      <li><%= link_to volunteer.name, {:action => :detail, :id => volunteer.id } %></li>
+  </td></tr>
+<% end %>
+</TABLE>
+
+<%= pagination_links @pages %>
+
+<Br><Br>
+Here's this list ready to be emailed:
+<BR>
+<TEXTAREA rows="4" cols="100"><% for vol in @volunteers %><% if vol.email -%>
+"<%= vol.name %>" <<%= vol.email %>>; <% end -%><% end -%>
+</TEXTAREA>
+
+<% else %>
+
+<br><Br>
+<h3>No volunteers matched your search.</h3>
+
+<% end -%>

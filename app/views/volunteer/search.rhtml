@@ -1,0 +1,16 @@
+<%=  form_tag :action => "results" %>
+<p>
+Using this form, you can search for volunteers who have filled out this form...
+<br>
+All fields in the form below are optional.  If you type anything / select a given skill,
+results will be limited by those volunteers who filled out the
+corresponding field in a way that matches what you type.
+</p>
+
+<%= submit_tag "Search" %>
+<%= render :partial => "volunteer_form", :object => @volunteer %>
+
+
+<% end_form_tag %>
+
+

@@ -19,7 +19,7 @@ module ApplicationHelper
   # (1) ensure that content below gets put BELOW where this call occurs  
   # (2) ensure that the height of the containing element extends down far enough to include this call
   def clearboth 
-    '<div class="cl"> </div>'
+    raw '<div class="cl"> </div>'
   end
   
   # Use this when you want to say "1 item" or "2 items" depending on how many items

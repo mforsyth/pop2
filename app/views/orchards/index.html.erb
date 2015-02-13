@@ -1,0 +1,17 @@
+<%= random_snapshot -%>
+
+<p class="note">POP has planted orchards with a diverse range of community-based organizations throughout Philadelphia. 
+</p>
+
+<p>    
+Check out the <%= link_to 'Philadelphia Orchard Project map', 'http://maps.google.com/maps/ms?ie=UTF8&hl=en&vps=1&jsv=310c&oe=UTF8&msa=0&msid=215060547173265545644.00049ad62575e882ece8c' -%> to see where our orchard partners are located:
+</p>
+
+<% for section in ORCHARD_SECTIONS %>
+  <h3><%= section['section'] %></h3>
+  <ul>
+    <% section['orchards'].each do |orchard| %>
+      <li><%= auto_link orchard %></li>
+    <% end %>
+  </ul>
+<% end %>

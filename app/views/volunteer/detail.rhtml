@@ -1,0 +1,80 @@
+
+<DIV class="breadcrumbs">
+  Back to:
+  <%= link_to "Search form", :action => "search" %>
+  |
+  <%= link_to_function "Volunteer list", "history.back(1)" %>
+</DIV>
+
+<table cellspacing="5" cellpadding="0" style="float: left; margin-right: 10px;">
+<tr>
+        <td>Name:</td>
+        <td><%= @volunteer.name %></td>
+</tr>
+
+<tr>
+        <td>E-mail address:</td>
+        <td><%= @volunteer.email %></td>
+</tr>
+<tr>
+        <td>Phone number:</td>
+        <td><%= @volunteer.phone %></td>
+</tr>
+</table>
+
+<table cellspacing="5" cellpadding="0">
+
+<tr>
+        <td>Address:</td>
+        <td><%= @volunteer.address1 %></td>
+</tr>
+<tr>
+        <td></td>
+        <td><%= @volunteer.address2 %></td>
+</tr>
+<tr>
+        <td></td>
+        <td>
+                <%= @volunteer.city %>,
+                <%= @volunteer.state %>
+                <%= @volunteer.zip %>
+        </td>
+</tr>
+</table>
+
+<br>
+Skills:
+<ul>
+<% for skill in @volunteer.skills %>
+  <li><%= skill.name_nl %> - <%= skill.level_nl %></li>
+<% end %>
+</ul>
+
+<% if @volunteer.donate_land -%>
+  <br><br>
+  <b>Can donate land!</b>
+<% end -%>
+
+<% unless @volunteer.who_can_help.blank? -%>
+   <br><br>
+   <b>Who can help?</b>
+   <br>
+   <%= @volunteer.who_can_help %>
+<% end -%>
+
+<% unless @volunteer.comments.blank? -%>
+   <br><br>
+   <b>Addional comments:</b>
+   <br>
+   <%= @volunteer.comments %>
+<% end -%>
+
+<br><br>
+This volunteer application was submitted on
+<br>
+<%= @volunteer.created_at.to_s :long %>
+
+<hr>
+<%=  button_to "Delete this applicant...",
+     url_for(:action => :delete, :id => @volunteer.id),
+     :confirm => "Are you sure you want to delete #{@volunteer.name} permanently?" %>

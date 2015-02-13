@@ -1,0 +1,82 @@
+<style type="text/css">
+	#paypal_form {
+		display:none;
+	}
+</style>
+
+<%= random_snapshot -%>
+
+<h3>Donate</h3>
+
+<p>
+The Philadelphia Orchard Project is a registered non-profit in Pennsylvania with a 501c3. All donations made out to "The Philadelphia Orchard Project" are tax deductible to the extent provided by law and will be used to plant and maintain orchards and cover costs associated with running the organization.
+</p>
+
+<h3>How to Donate:</h3>
+
+<ul>
+<li>Send a check made payable to "Philadelphia Orchard Project" to
+  <br/>Philadelphia Orchard Project
+  <br/>c/o Phil Forsyth, Executive Director
+  <br/>4934 Larchwood Ave
+  <br/>Philadelphia, PA 19143
+</li>
+<li>Make a one-time donation online through <%= link_to 'PAYPAL', 'javascript:$("paypal_form").submit();' -%>
+</li>
+<li>
+<b>New!</b> Donate monthly. Choose the option below and Paypal will
+automatically bill you each month for a year at the payment level you choose:
+
+<%= render :partial => 'paypal_form' %>
+
+</li>
+<li>Sponsor an orchard (see below)</li>
+<li><%= link_to 'See here', '/donate/levels' %> for more information on what your contribution can purchase for a community in need, how to adopt an orchard or sponsor a new orchard, and sponsorship opportunities for businesses.</li>
+</ul>
+
+<%= image_tag 'earthshare.jpg', :class => 'earthshare' %>
+
+<ul>
+<li>Make an in-kind contribution of fruit or nut trees, berry bushes, or
+tools. Please email our Orchard Director Phil Forsyth (<%= link_to 'phil@phillyorchards.org', 'mailto:phil@phillyorchards.org' -%>) for details.</li>
+<li>Remember Philadelphia Orchard Project in your estate plans by contacting your legal or financial advisor.</li>
+</ul>
+
+<h3>Why Donate:</h3>
+
+<p>
+A donation to the Philadelphia Orchard Project is a unique way to support multiple social, environmental, and economic objectives. The benefits of orchards include:
+<ul>
+<li>Improving nutrition and public health by building community food security.</li>
+<li>Restoring air, water, and soil quality.</li>
+<li>Bringing people together to make neighborhoods cleaner, safer, and more livable.</li>
+<li>Cutting fossil fuel emissions by sequestering carbon and localizing food supply.</li>
+</ul>
+</p>
+
+<p>Carbon Offsets:
+	<br/>
+The Philadelphia Orchard Project is a great way to offset your carbon emissions. Each time you take a trip or each year, consider making a donation to POP to help us reduce emissions by planting healthy trees and reducing food miles.
+</p>
+
+<form id="paypal_form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="DAKQ6F4GP7VUG">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+<h3>Current Foundation Funders:</h3>
+
+<ul>
+  <li>ACTrees</li>
+  <li>Arthur and Gail Pasquarella Family Foundation</li>
+  <li>Claneil Foundation</li>
+  <li>Dry Family Foundation</li>
+  <li>EarthShare PA</li>
+  <li>Henrietta Tower Wurts Memorial (Philadelphia Foundation)</li>
+  <li>Junior League of Philadelphia</li>
+	<li>Leo &amp; Peggy Pierce Foundation</a>
+  <li>Patricia Kind Family Foundation</li>
+  <li>Renew Foundation (UPenn)</li>
+</ul>

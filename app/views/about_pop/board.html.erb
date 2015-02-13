@@ -1,0 +1,23 @@
+<h3>Board of Directors
+</h3>
+
+<% for bio in @bios %>
+  <% @bio = bio %>
+
+  <%= clearboth -%>
+
+  <% unless bio.image.blank? %>
+    <%= image_tag url_for_file_column('bio', 'image'), :align => :right,
+      :class => 'headshot', :width => 150 %>
+  <% end %>
+  <p><div class="label"><%= bio.name %><%= " – #{bio.position}" unless
+                                             bio.position.blank?
+                                             %></div>
+    <%= bio.outside_job %>
+  </p>
+  <p>
+    <%= bio.description %>
+  </p>
+
+<% end %>
+
