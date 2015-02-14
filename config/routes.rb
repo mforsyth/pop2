@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/about_pop', controller: :about_pop, action: :index 
   get '/about_pop/board', controller: :about_pop, action: :board 
   get '/about_pop/faq', controller: :about_pop, action: :faq 
+  get '/about_pop/manifesto', controller: :about_pop, action: :manifesto 
   get '/about_pop/staff', controller: :about_pop, action: :staff 
 
   get '/donate', controller: :donate, action: :index 
