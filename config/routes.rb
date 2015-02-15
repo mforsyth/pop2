@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   root 'welcome#index'
 
   get '/about_pop', controller: :about_pop, action: :index 
