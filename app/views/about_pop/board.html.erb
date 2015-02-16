@@ -6,10 +6,10 @@
 
   <%= clearboth -%>
 
-  <% unless bio.image.blank? %>
-    <%= image_tag url_for_file_column('bio', 'image'), :align => :right,
+  <%# unless bio.image.blank? %>
+    <%#= image_tag url_for_file_column('bio', 'image'), :align => :right,
       :class => 'headshot', :width => 150 %>
-  <% end %>
+  <%# end %>
   <p><div class="label"><%= bio.name %><%= " – #{bio.position}" unless
                                              bio.position.blank?
                                              %></div>

@@ -18,7 +18,7 @@ class BoardMember < ActiveRecord::Base
   validates_presence_of :last_name
   validates_numericality_of :rank, :only_integer => true, :allow_nil => true
 
-  file_column :image
+  # file_column :image
 
   def name
     "#{first_name} #{last_name}"
