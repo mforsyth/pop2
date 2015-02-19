@@ -44,5 +44,6 @@ group :development, :test do
 end
 
 gem 'activeadmin', github: 'activeadmin'
+gem 'devise', '>= 3.4.1'
 gem 'rails_12factor', group: :production
 gem 'rails_autolink'
