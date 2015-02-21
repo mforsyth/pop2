@@ -46,5 +46,6 @@ end
 gem 'activeadmin', github: 'activeadmin'
 gem 'aws-sdk'
 gem 'devise', '>= 3.4.1'
+gem 'puma'
 gem 'rails_12factor', group: :production
 gem 'rails_autolink'
