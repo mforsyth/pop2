@@ -14,16 +14,28 @@ ActiveAdmin.register BoardMember do
 
   config.filters = false
 
-  form do |f|
+  form(html: {class: 'direct-upload'}) do |f|
+    s3_direct_post = S3_BUCKET
+      .presigned_post(key: "board_pics/${filename}",
+                      success_action_status: 201, acl: :public_read)
+
     f.inputs('Board Member Details') do
       f.input :first_name
       f.input :last_name
       f.input :position
       f.input :outside_job
       f.input :description
-      f.input :image
+      f.input :image, as: :file
       f.input :rank
       f.actions
     end
+    
+    f.insert_tag(Arbre::HTML::Script) {
+      raw <<DONE
+      $(function() {
+        allowS3Upload($('#board_member_image_input'), '#{s3_direct_post.url}', #{s3_direct_post.fields.to_json.html_safe})
+ });
+DONE
+    }
   end
 end
