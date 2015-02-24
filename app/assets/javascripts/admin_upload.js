@@ -33,7 +33,7 @@ function allowS3Upload(fileInput, directPostUrl, directPostFormData) {
 
       // extract key and generate URL from response
       var key   = $(data.jqXHR.responseXML).find("Key").text();
-      var url   = '//' + directPostUrl + '/' + key;
+      var url   = directPostUrl + key;
 
       // create hidden field
       var input = $("<input />", { type:'hidden', name: fileInput.attr('name'), value: url })

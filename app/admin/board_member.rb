@@ -33,7 +33,7 @@ ActiveAdmin.register BoardMember do
     f.insert_tag(Arbre::HTML::Script) {
       raw <<DONE
       $(function() {
-        allowS3Upload($('#board_member_image_input'), '#{s3_direct_post.url}', #{s3_direct_post.fields.to_json.html_safe})
+        allowS3Upload($('#board_member_image'), '#{s3_direct_post.url}', #{s3_direct_post.fields.to_json.html_safe})
  });
 DONE
     }
