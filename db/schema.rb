@@ -50,49 +50,49 @@ ActiveRecord::Schema.define(version: 20150219023343) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "board_members", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.string   "position",    limit: 255
-    t.string   "outside_job", limit: 255
+    t.string   "name",        limit: 510
+    t.string   "position",    limit: 510
+    t.string   "outside_job", limit: 510
     t.text     "description"
-    t.string   "image",       limit: 255
+    t.string   "image",       limit: 510
     t.integer  "rank"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "first_name",  limit: 255
-    t.string   "last_name",   limit: 255
+    t.string   "first_name",  limit: 510
+    t.string   "last_name",   limit: 510
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "title",                 limit: 255
+    t.string   "title",                 limit: 510
     t.datetime "when_starts"
-    t.string   "address",               limit: 255
-    t.string   "place_name",            limit: 255
+    t.string   "address",               limit: 510
+    t.string   "place_name",            limit: 510
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "when_text",             limit: 255
+    t.string   "when_text",             limit: 510
     t.integer  "num_volunteers_needed"
-    t.integer  "rsvp_allowed",                      default: 1
+    t.boolean  "rsvp_allowed"
   end
 
   create_table "news_stories", force: :cascade do |t|
-    t.string   "title",        limit: 255
-    t.string   "url",          limit: 255
-    t.string   "publisher",    limit: 255
+    t.string   "title",        limit: 510
+    t.string   "url",          limit: 510
+    t.string   "publisher",    limit: 510
     t.date     "published_on"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "rsvps", force: :cascade do |t|
-    t.string   "name",               limit: 255,             null: false
+    t.string   "name",               limit: 510,             null: false
     t.integer  "event_id",                                   null: false
-    t.integer  "attending",                      default: 0
+    t.boolean  "attending"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "email",              limit: 255
+    t.string   "email",              limit: 510
     t.integer  "how_many",                       default: 1
-    t.integer  "board_or_committee",             default: 1
+    t.boolean  "board_or_committee"
   end
 
   create_table "settings", force: :cascade do |t|
