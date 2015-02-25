@@ -9,11 +9,23 @@ ActiveAdmin.register BoardMember do
     column :rank
     actions
   end
-  
   config.sort_order = 'rank_asc'
-
   config.filters = false
 
+  show do
+    attributes_table do
+      row :first_name
+      row :last_name
+      row :position
+      row :outside_job
+      row :description
+      row :image do |board_member|
+        image_tag(board_member.image)
+      end
+      row :rank
+    end
+  end
+  
   form(html: {class: 'direct-upload'}) do |f|
     s3_direct_post = S3_BUCKET
       .presigned_post(key: "board_pics/${filename}",
