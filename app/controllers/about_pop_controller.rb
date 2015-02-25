@@ -9,7 +9,8 @@ class AboutPopController < ApplicationController
   end
 
   def board
-    @bios = BoardMember.find(:all, :order => "rank is not null desc, rank asc, last_name asc")
+    @bios = BoardMember.
+      order("rank is not null desc, rank asc, last_name asc")
   end
 
   def faq
