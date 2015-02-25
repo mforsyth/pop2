@@ -6,7 +6,6 @@ ActiveAdmin.register_page "Dashboard" do
     div class: "blank_slate_container", id: "dashboard_default_message" do
       span class: "blank_slate" do
         div "Welcome to Philadelphia Orchard Project Administration."
-        div "Here's a Big Empty Dashboard."
       end
     end
 
