@@ -1,10 +1,10 @@
 ActiveAdmin.register Event do
-  # permit_params :first_name, :last_name, :position,
-  #   :outside_job, :description, :image, :rank
+  permit_params :when_starts, :when_text, :title, :place_name,
+    :description, :address, :num_volunteers_needed, :rsvp_allowed
 
   index do
     column "When", :when_starts
-    column "Activiy", :title
+    column "Activity", :title
     column :place_name
     actions
   end
@@ -12,40 +12,34 @@ ActiveAdmin.register Event do
 
   show do
     attributes_table do
-      row :first_name
-      row :last_name
-      row :position
-      row :outside_job
-      row :description
-      row :image do |board_member|
-        image_tag(board_member.image)
+      row :when do |event|
+        event.when_starts
       end
-      row :rank
+      row :when_text
+      row :activity do |event|
+        event.title
+      end
+      row :place_name
+      row :description
+      row :place_name
+      row :num_volunteers_needed
+      row :rsvp_allowed do |event| 
+        event.rsvp_allowed? ? 'Yes' : 'No'
+      end
     end
   end
   
-  form(html: {class: 'direct-upload'}) do |f|
-    s3_direct_post = S3_BUCKET
-      .presigned_post(key: "board_pics/${filename}",
-                      success_action_status: 201, acl: :public_read)
-
-    f.inputs('Board Member Details') do
-      f.input :first_name
-      f.input :last_name
-      f.input :position
-      f.input :outside_job
+  form do |f|
+    f.inputs('Event Details') do
+      f.input :when_starts, label: 'When', as: :datepicker
+      f.input :when_text
+      f.input :title, label: 'Activity'
+      f.input :place_name
       f.input :description
-      f.input :image, as: :file
-      f.input :rank
+      f.input :address, label: 'Location'
+      f.input :num_volunteers_needed
+      f.input :rsvp_allowed
       f.actions
     end
-    
-    f.insert_tag(Arbre::HTML::Script) {
-      raw <<DONE
-      $(function() {
-        allowS3Upload($('#board_member_image'), '#{s3_direct_post.url}', #{s3_direct_post.fields.to_json.html_safe})
- });
-DONE
-    }
   end
 end
