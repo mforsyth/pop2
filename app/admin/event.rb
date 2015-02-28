@@ -23,8 +23,13 @@ ActiveAdmin.register Event do
       row :description
       row :place_name
       row :num_volunteers_needed
-      row :rsvp_allowed do |event| 
-        event.rsvp_allowed? ? 'Yes' : 'No'
+      row :rsvp_allowed do |event|
+        if event.rsvp_allowed?
+          link_to("Yes - click for current RSVPS",
+                  admin_event_rsvps_path(event))
+        else
+          'No'
+        end
       end
     end
   end
