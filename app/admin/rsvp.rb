@@ -1,7 +1,6 @@
 ActiveAdmin.register Rsvp do
   belongs_to :event
   
-#  actions :edit, :update, :delete, :create
   config.filters = false
   
   permit_params :event_id, :name, :attending, :email, :how_many,
@@ -12,7 +11,7 @@ ActiveAdmin.register Rsvp do
     column :name
     column :email
     column :how_many
-    column :board_or_committe
+    column :board_or_committee
     actions
   end
 
