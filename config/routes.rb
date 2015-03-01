@@ -26,4 +26,5 @@ Rails.application.routes.draw do
 
   get '/welcome/news', controller: :welcome, action: :news 
 
+  resources :rsvps, only: :create
 end
