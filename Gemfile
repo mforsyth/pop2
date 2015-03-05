@@ -48,6 +48,7 @@ end
 gem 'activeadmin', github: 'activeadmin'
 gem 'aws-sdk', '~> 1'
 gem 'devise', '>= 3.4.1'
+gem 'newrelic_rpm'
 gem 'puma'
 gem 'rails_12factor', group: :production
 gem 'rails_autolink'
