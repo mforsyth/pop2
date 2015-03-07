@@ -21,11 +21,13 @@
 <div id="container">
 	<%= image_tag 'top_banner.jpg', :id => 'top_banner' -%>
 
-	<% for nav in %w(welcome orchards volunteer donate about_pop) %>"
-		<%= link_to image_tag("#{nav}_#{controller.controller_name == nav ? 'on' : 'off'}.png", 
-			:id => "#{nav}_nav", :class => 'main_nav', 
-			:onMouseOver => "mouseOverMenu('#{nav}');",
-			:onMouseOut => "mouseOutMenu('#{nav}');"), :controller => nav -%>
+	<% for nav in %w(welcome orchards volunteer donate about_pop) %>
+	  <%= link_to(nav.humanize, { controller: nav }, {
+              id: "#{nav}_nav",
+              class: "main_nav #{nav == controller.controller_name ? 'on' : 'off'}",
+	      onMouseOver: "mouseOverMenu('#{nav}');",
+	      onMouseOut: "mouseOutMenu('#{nav}');"
+              }) -%>
 		<div id="submenu_<%= nav -%>" class="submenu" onMouseOver="mouseOverSubMenu('<%= nav -%>');" onMouseOut="mouseOutSubMenu('<%= nav -%>');" style="display:none">
 			<%= sections_for "#{nav}_controller".camelize.constantize -%>
   		</div>

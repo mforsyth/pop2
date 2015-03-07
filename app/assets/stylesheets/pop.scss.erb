@@ -122,12 +122,29 @@ li {
 	}
 }
 .main_nav {
-	position: absolute;
-	top: 137px;
-	height: 21px;
-	width: 127px;
-	z-index: 10;
+    position: absolute;
+    top: 137px;
+    height: 18px;
+    width: 121px;
+    z-index: 10;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-top: 2px;
+    margin-left:3px;
+    margin-right:3px;
+    border-radius: 0 0 18px 18px;
+    font-size: 8pt;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: white;
+    &.on {
+      background-color: $color_vin_rouge_approx;
+    }
+    &.off {
+      background-color: $black;
+    }
 }
+
 #welcome_nav {
 	left: 147px;
 }
