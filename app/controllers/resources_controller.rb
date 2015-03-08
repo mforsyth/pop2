@@ -4,9 +4,10 @@ class ResourcesController < ApplicationController
     @resources = Resource.order("priority asc")
   end
 
-  def self.sections  
-    [
-    ]
+  def self.sections
+    Resource.order("priority asc").map { |r|
+      [r.title, r.url]
+    }
   end
 
 end
