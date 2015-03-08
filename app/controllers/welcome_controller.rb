@@ -9,6 +9,7 @@ class WelcomeController < ApplicationController
   end
 
   def self.sections  
-    [['Home', 'index'], ['News', 'news']]
+    [['Home', '/'],
+     ['News', '/welcome/news']]
   end
 end

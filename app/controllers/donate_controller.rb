@@ -9,8 +9,8 @@ class DonateController < ApplicationController
   
   def self.sections  
     [
-      ['Give', 'index'],
-      ['Donation Levels', 'levels'],
+      ['Give', '/donate'],
+      ['Donation Levels', '/donate/levels'],
     ]
   end
 

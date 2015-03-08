@@ -8,8 +8,7 @@ module ApplicationHelper
     return "" unless the_controller.respond_to? :sections
     str = ""
     for section in the_controller.sections		  
-      rel_controller = the_controller.name.underscore.split('_')[0..-2].join('_')
-      str << "<div>#{link_to section.first, :controller => rel_controller, :action => section.last}</div>\n"
+      str << "<div>#{link_to section.first, section.last}</div>\n"
     end
     raw str
   end

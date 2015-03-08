@@ -14,9 +14,9 @@ class VolunteerController < ApplicationController
 
   def self.sections
     [
-      ['Schedule of plantings/events', 'schedule'],
-      ['Sign up for POP\'s listserve', 'signup'],
-      ['POP committees', 'committees'],
+      ['Schedule of plantings/events', '/volunteer/schedule'],
+      ['Sign up for POP\'s listserve', '/volunteer/signup'],
+      ['POP committees', 'volunteer/committees'],
     ]
   end
 

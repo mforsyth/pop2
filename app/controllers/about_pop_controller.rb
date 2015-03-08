@@ -19,10 +19,10 @@ class AboutPopController < ApplicationController
 
   def self.sections
     [
-      ['The Organization', 'index'],
-      ['Staff Directory', 'staff'],
-      ['Board Member Bios', 'board'],
-      ['FAQ', 'faq']
+      ['The Organization', '/about_pop'],
+      ['Staff Directory', '/about_pop/staff'],
+      ['Board Member Bios', '/about_pop/board'],
+      ['FAQ', '/about_pop/faq']
     ]
   end
 

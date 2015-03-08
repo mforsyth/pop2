@@ -23,12 +23,12 @@ class OrchardsController < ApplicationController
 
   def self.sections
     [
-      ['Map', 'map'],
-      ['POP orchards planted', 'index'],
-      ['POP Partner Application', 'develop'],
-      ['How POP Plants', 'permaculture'],
-      ['Plants POP Plants', 'plants'],
-      ['Links', 'links']
+      ['Map', '/orchards/map'],
+      ['POP orchards planted', '/orchards/'],
+      ['POP Partner Application', '/orchards/develop'],
+      ['How POP Plants', '/orchards/permaculture'],
+      ['Plants POP Plants', '/orchards/plants'],
+      ['Links', '/orchards/links']
     ]
   end
 
