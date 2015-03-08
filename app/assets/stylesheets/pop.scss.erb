@@ -121,45 +121,50 @@ li {
 		font-weight: bold;
 	}
 }
+
 .main_nav {
-    position: absolute;
-    top: 137px;
-    height: 18px;
-    width: 121px;
-    z-index: 10;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding-top: 2px;
-    margin-left:3px;
-    margin-right:3px;
-    border-radius: 0 0 18px 18px;
-    font-size: 7pt;
-    text-align: center;
-    letter-spacing: 0.1em;
-    color: white;
-    &.on {
-      background-color: $color_vin_rouge_approx;
-    }
-    &.off {
-      background-color: $black;
-    }
+  position: absolute;
+  top: 137px;
+  height: 18px;
+  width: 100px;
+  z-index: 10;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-top: 2px;
+  margin-left:3px;
+  margin-right:3px;
+  border-radius: 0 0 18px 18px;
+  font-size: 7pt;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: white;
+  &.on {
+    background-color: $color_vin_rouge_approx;
+  }
+  &.off {
+    background-color: $black;
+  }
 }
 
-#welcome_nav {
+#welcome_nav, #submenu_welcome {
 	left: 147px;
 }
-#orchards_nav {
-	left: 274px;
+#orchards_nav, #submenu_orchards {
+	left: 253px;
 }
-#volunteer_nav {
-	left: 401px;
+#resources_nav, #submenu_resources {
+	left: 359px;
 }
-#donate_nav {
-	left: 528px;
+#volunteer_nav, #submenu_volunteer {
+	left: 465px;
 }
-#about_pop_nav {
-	left: 655px;
+#donate_nav, #submenu_donate {
+	left: 571px;
 }
+#about_pop_nav, #submenu_about_pop {
+	left: 680px;
+}
+
 #right_bar {
 	position: absolute;
 	top: 137px;
@@ -277,21 +282,6 @@ li {
 	div {
 		margin: 10px;
 	}
-}
-#submenu_welcome {
-	left: 147px;
-}
-#submenu_orchards {
-	left: 274px;
-}
-#submenu_volunteer {
-	left: 401px;
-}
-#submenu_donate {
-	left: 528px;
-}
-#submenu_about_pop {
-	left: 655px;
 }
 #item_price_1 {
 	width: 100px;
