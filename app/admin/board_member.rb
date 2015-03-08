@@ -25,11 +25,14 @@ ActiveAdmin.register BoardMember do
       row :rank
     end
   end
-  
+
   form(html: {class: 'direct-upload'}) do |f|
     s3_direct_post = S3_BUCKET
       .presigned_post(key: "board_pics/${filename}",
-                      success_action_status: 201, acl: :public_read)
+                      success_action_status: 201,
+                      acl: :public_read,
+                     )
+      .where(:content_type).starts_with("")
 
     f.inputs('Board Member Details') do
       f.input :first_name
@@ -41,7 +44,7 @@ ActiveAdmin.register BoardMember do
       f.input :rank
       f.actions
     end
-    
+
     f.insert_tag(Arbre::HTML::Script) {
       raw <<DONE
       $(function() {
