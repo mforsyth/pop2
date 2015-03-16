@@ -1,13 +1,17 @@
 class ResourcesController < ApplicationController
   
   def index
-    @resources = Resource.order("priority asc")
   end
 
-  def self.sections
-    Resource.order("priority asc").map { |r|
-      [r.title, r.url]
-    }
+  def show
+    @section_key = params[:id]
+    unless @section = Resource::SECTIONS.rassoc(@section_key)
+      raise ActionController::RoutingError
+        .new("Unknown section #{@section}.")
+    end
+    @section_title = @section.first
+    @resources = Resource.where(section: @section_key)
+      .order("priority asc")
   end
 
 end
