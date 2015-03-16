@@ -3,7 +3,7 @@ class Resource < ActiveRecord::Base
   validates_presence_of :url
   validates_presence_of :section
 
-  SECTIONS = [['POP Handouts and Resources', 'pop_handouts_resources'],
+  SECTIONS = [['POP Handouts and Resources', 'pop_handouts'],
               ['Curriculum Links', 'curriculum'],
               ['Food Preservation Links', 'food_preservation'],
               ['Orchard Care Links', 'orchard_care'],
