@@ -14,4 +14,12 @@ class ResourcesController < ApplicationController
       .order("priority asc")
   end
 
+  SECTIONS = Resource::SECTIONS.map { |section|
+    [section.first, "/resources/#{section.last}"]
+  } << ['Organizational Links', '/orchards/links'];
+
+  def self.sections
+    SECTIONS
+  end
+
 end
