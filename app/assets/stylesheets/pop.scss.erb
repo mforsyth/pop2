@@ -1,14 +1,14 @@
 //colors
 $black: #000;
-$color_finn_approx: #6a3252;
-$color_fall_green_approx: #e4ecbd;
+$finn: #6a3252;
+$fall_green: #e4ecbd;
 $white: #fff;
-$color_vin_rouge_approx: #94356d;
-$color_grandis_approx: #f4d28b;
-$color_citron_approx: #98b318;
+$vin_rouge: #94356d;
+$grandis: #f4d28b;
+$citron: #98b318;
 $red: red;
-$color_japanese_laurel_approx: green;
-$color_mountain_mist_approx: #999;
+$japanese_laurel: green;
+$mountain_mist: #999;
 
 //fonts
 $font_0: Georgia;
@@ -91,7 +91,7 @@ li {
 		font-style: normal;
 		font-size: 12pt;
 		font-weight: bold;
-		color: #6A3252;
+		color: $finn;
 	}
 }
 #social-links {
@@ -139,7 +139,7 @@ li {
   letter-spacing: 0.1em;
   color: white;
   &.on {
-    background-color: $color_vin_rouge_approx;
+    background-color: $vin_rouge;
   }
   &.off {
     background-color: $black;
@@ -183,14 +183,14 @@ li {
 }
 #upcoming_events {
 	padding-top: 37px;
-	background-color: #E4ECBD;
+	background-color: $fall_green;
 	h3 {
 		font-weight: bold;
 	}
 }
 #plant_counts {
 	color: $white;
-	background-color: #94356D;
+	background-color: $vin_rouge;
 	white-space: nowrap;
 	div {
 		background-color: $white;
@@ -204,7 +204,7 @@ li {
 	}
 }
 #what_planting {
-	background-color: #F4D28B;
+	background-color: $grandis;
 	h3 {
 		font-weight: bold;
 	}
@@ -222,20 +222,20 @@ li {
 	h2 {
 		margin-top: 25px;
 		font-size: 15px;
-		color: #98B318;
+		color: $citron;
 		margin-bottom: 15px;
 	}
 	h3 {
 		margin-top: 25px;
 		font-size: 13px;
-		color: #98B318;
+		color: $citron;
 		margin-bottom: 15px;
 	}
 	p {
 		padding-right: 15px;
 		margin-bottom: 15px;
 		a {
-			color: #98B318;
+			color: $citron;
 		}
 	}
 	ul {
@@ -258,7 +258,7 @@ li {
 #flash_notice {
 	font-weight: bold;
 	font-size: 14px;
-	color: $color_japanese_laurel_approx;
+	color: $japanese_laurel;
 	margin-bottom: 20px;
 }
 #logged_in {
@@ -274,7 +274,7 @@ li {
 .submenu {
 	position: absolute;
 	border: 1px solid $black;
-	background-color: #F4D28B;
+	background-color: $grandis;
 	width: 127px;
 	top: 158px;
 	z-index: 10;
@@ -306,7 +306,7 @@ li {
 	}
 	.caption {
 		text-align: center;
-		color: $color_mountain_mist_approx;
+		color: $mountain_mist;
 		margin: 5px 0 10px;
 	}
 	#pop_address {
@@ -326,10 +326,10 @@ p.spaced {
 }
 
 .not_attending {
-	color: $color_mountain_mist_approx;
+	color: $mountain_mist;
 }
 fieldset.event {
-	border: 1px dotted $color_mountain_mist_approx;
+	border: 1px dotted $mountain_mist;
 	padding: 10px;
 	margin-right: 10px;
 	margin-bottom: 15px;
