@@ -1,7 +1,3 @@
 <h3>POP Resources</h3>
 
-<ul>
-  <% @resources.each do |resource| %>
-  <li><%= link_to resource.title, resource.url %></li>
-  <% end %>
-</ul>
+<%= sections_for(controller.class) %>
