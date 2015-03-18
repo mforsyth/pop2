@@ -15,7 +15,7 @@
   </th>
   <% @resources.each { |resource| %>
   <tr>
-    <td><%= link_to resource.title, resource.url, target: '_new' %></td>
+    <td><%= link_to resource.organization, resource.url, target: '_new' %></td>
     <td><%= resource.description %></td>
     <td><%= resource.nature %></td>
     <td><%= resource.audience %></td>

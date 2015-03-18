@@ -2,7 +2,7 @@ ActiveAdmin.register Resource do
   
   index do
     column :section
-    column :title
+    column :organization
     column :description
     column :nature, as: 'Type'
     column :audience
@@ -16,7 +16,7 @@ ActiveAdmin.register Resource do
       row :section do |r| 
         Resource::SECTIONS.rassoc(r.section).first
       end
-      row :title
+      row :organization
       row :url do |resource|
         link_to('Download', resource.url)
       end
@@ -26,13 +26,13 @@ ActiveAdmin.register Resource do
     end
   end
   
-  permit_params :section, :title, :description, :url, :external_url,
-    :nature, :audience
+  permit_params :section, :organization, :description, :url,
+    :external_url, :nature, :audience
   
   form(html: {class: 'direct-upload'}) do |f|
     f.inputs('Board Member Details') do
       f.input :section, as: :select, collection: Resource::SECTIONS
-      f.input :title
+      f.input :organization
       f.input :external_url, label: 'External link url...'
       f.input :url, as: :file, label: '... or upload a file'
       f.input :description
