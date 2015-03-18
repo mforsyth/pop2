@@ -15,8 +15,20 @@
   </th>
   <% @resources.each { |resource| %>
   <tr>
-    <td><%= link_to resource.organization, resource.url, target: '_new' %></td>
-    <td><%= resource.description %></td>
+    <td>
+      <% if resource.organization == 'POP' %>
+      POP
+      <% else %>
+      <%= link_to resource.organization, resource.url, target: '_new' %>
+      <% end %>
+    </td>
+    <td>
+      <% if resource.organization == 'POP' %>
+      <%= link_to resource.description, resource.url, target: '_new' %>
+      <% else %>
+      <%= resource.description %>
+      <% end %>
+    </td>
     <td><%= resource.nature %></td>
     <td><%= resource.audience %></td>
   </tr>
