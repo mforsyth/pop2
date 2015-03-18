@@ -8,6 +8,7 @@ class Resource < ActiveRecord::Base
 
   validates_presence_of :organization
   validates_presence_of :section
+  validates_presence_of :url
   validates_inclusion_of :section, in: SECTIONS.map(&:last)
 
   attr_accessor :external_url
