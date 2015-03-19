@@ -22,7 +22,9 @@ ActiveAdmin.register Event do
       end
       row :place_name
       row :description
-      row :place_name
+      row :location do |event|
+        event.address
+      end
       row :num_volunteers_needed
       row :rsvp_allowed do |event|
         if event.rsvp_allowed?
