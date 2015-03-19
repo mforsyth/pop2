@@ -14,7 +14,7 @@
 <% for event in Event.upcoming(99) %>
   <fieldset class="event">
     <legend>
-      <% if event.when_text %>
+      <% if event.when_text.present? %>
         <%= event.when_text -%>
       <% else %>
         <%= event.when_starts.strftime "%A, %B %d" -%>... <%= event.when_starts.strftime "%I:%M %p" -%>

@@ -1,11 +1,13 @@
 class Event < ActiveRecord::Base
 
+  just_define_datetime_picker :when_starts
+
   has_many :rsvps
 
   def to_label
     "#{title}: #{place_name}"
   end
-  
+
   class << self
     def upcoming(length=10)
       where('when_starts >= ?', DateTime.now.beginning_of_day)
@@ -29,4 +31,3 @@ end
 #  updated_at  :datetime
 #  when_text   :string(255)
 #
-

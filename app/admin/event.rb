@@ -1,6 +1,7 @@
 ActiveAdmin.register Event do
-  permit_params :when_starts, :when_text, :title, :place_name,
-    :description, :address, :num_volunteers_needed, :rsvp_allowed
+  permit_params :when_text, :title, :place_name,
+    :description, :address, :num_volunteers_needed, :rsvp_allowed,
+    :when_starts_date, :when_starts_time_hour, :when_starts_time_minute
 
   index do
     column "When", :when_starts
@@ -13,7 +14,7 @@ ActiveAdmin.register Event do
   show do
     attributes_table do
       row :when do |event|
-        event.when_starts
+        event.when_starts.to_formatted_s(:event_display)
       end
       row :when_text
       row :activity do |event|
@@ -36,7 +37,7 @@ ActiveAdmin.register Event do
   
   form do |f|
     f.inputs('Event Details') do
-      f.input :when_starts, label: 'When', as: :datepicker
+      f.input :when_starts, label: 'When', as: :just_datetime_picker
       f.input :when_text
       f.input :title, label: 'Activity'
       f.input :place_name
