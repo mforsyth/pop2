@@ -29,11 +29,18 @@ ActiveAdmin.register Event do
       row :rsvp_allowed do |event|
         if event.rsvp_allowed?
           link_to("Yes - click for current RSVPS",
-                  admin_event_rsvps_path(event))
+                  admin_event_rsvps_path(event)) +
+            content_tag("div") { "Email \"to\" for positive RSVP's:" } +
+            content_tag("textarea", rows: 6, cols: 120) do
+            event.rsvps.where(attending: true).map { |rsvp|
+              "\"#{rsvp.name}\" <#{rsvp.email}>"
+            }.join(", ")
+          end
         else
           'No'
         end
       end
+      
     end
   end
   
