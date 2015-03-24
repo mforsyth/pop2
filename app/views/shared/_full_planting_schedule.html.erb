@@ -37,7 +37,7 @@
         <% unless attending.blank? %>
           <div class="attending">
             <i>Attending (<%= num_attending -%>):</i>
-            <%= attending.map(&:name_with_bringing).join(', ') -%>
+            <%= attending.map(&:name_with_bringing).join(', ').html_safe -%>
           </div>
         <% end %>
 
