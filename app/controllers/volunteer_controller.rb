@@ -16,7 +16,7 @@ class VolunteerController < ApplicationController
     [
       ['Schedule of plantings/events', '/volunteer/schedule'],
       ['Sign up for POP\'s listserve', '/volunteer/signup'],
-      ['POP committees', 'volunteer/committees'],
+      ['POP committees', '/volunteer/committees'],
     ]
   end
 
