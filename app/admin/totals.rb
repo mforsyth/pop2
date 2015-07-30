@@ -1,8 +1,9 @@
 ActiveAdmin.register Setting, as: "Totals" do
-  menu false 
+  menu false
   actions :show, :edit, :update
-  
-  permit_params :num_orchards_supported
+
+  permit_params :num_orchards_supported, :orchards_planted, :trees_planted,
+                :berry_bushes_planted, :num_perennials
 
   show title: 'Totals' do
     attributes_table do
